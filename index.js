@@ -30,7 +30,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect MongoDB
-    await client.connect();
+    // await client.connect();
 
     const db = client.db("hireme");
     const jobCollection = db.collection("jobs");
@@ -109,9 +109,9 @@ app.get("/job/:id", async (req, res) => {
 
 
     // MongoDB connection test
-    await client.db("admin").command({
-      ping: 1,
-    });
+    // await client.db("admin").command({
+    //   ping: 1,
+    // });
 
     console.log("MongoDB ping successful");
 
